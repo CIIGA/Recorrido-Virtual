@@ -83,7 +83,7 @@
             </a-plane>
 
             <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link href="foto.php?cuenta=PT058047" position="0.5 -0.82 0.01" scale="0.3 0.1 1" visible="false">
+            <a-link href="recorrido.php" position="0.5 -0.82 0.01" scale="0.3 0.1 1" visible="false">
             </a-link>
         </a-entity>
         <!-- panel pagos -->

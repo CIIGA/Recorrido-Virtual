@@ -10,7 +10,8 @@ AFRAME.registerComponent('oculus-thumbstick-controls', {
         adEnabled: {default: true},
         adInverted: {default: false},
         wsEnabled: {default: true},
-        wsInverted: {default: false}
+        wsInverted: {default: false},
+        zAxis: { default: 'y', oneOf: ['x', 'y', 'z'] }, // Agrega esta línea
     },
     init: function () {
         this.easing = 1.1;
