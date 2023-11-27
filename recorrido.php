@@ -47,7 +47,7 @@
                   Direccion: C. DE LA GRIETA 710 , colonia PLAYAS DE TIJUANA SECCION JARDINES, cp , PLAYAS DE TIJUANA, Edo. México; align: justify;"></a-entity>
 
                 <a-plane position="0.5 -0.82 0.001" height="0.15" width="0.5" material="color: blue">
-                    <a-text value="Reccorrido" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
+                    <a-text value="Entrar" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
                 </a-plane>
 
                 <!-- icono para quitar el panel -->
@@ -57,7 +57,7 @@
                 </a-plane>
 
                 <!-- Enlace invisible para hacer clic en el botón -->
-                <a-link href="recorrido.php" position="0.5 -0.82 0.01" scale="0.3 0.1 1" visible="false">
+                <a-link href="foto.php" position="0.5 -0.82 0.01" scale="0.3 0.1 1" visible="false">
                 </a-link>
             </a-entity>
 
