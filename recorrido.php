@@ -30,7 +30,7 @@
             <a-entity oculus-touch-controls="hand: left" oculus-y-controls></a-entity>
             <a-entity oculus-touch-controls="hand: right" oculus-xz-controls></a-entity>
             <!-- los laser -->
-            <a-entity id="leftHand" link-controls="hand: left" raycaster="objects: [mixin='box']"></a-entity>
+            <a-entity id="leftHand" link-controls="hand: left" raycaster="objects: [mixin='box']" line="color: #118A7E"></a-entity>
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
 
