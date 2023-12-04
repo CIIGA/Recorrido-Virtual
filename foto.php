@@ -27,7 +27,7 @@
 
 
         <!-- panel ficha -->
-        <a-entity position="3 0.4 0" rotation="0 -50 0" panel-fichap visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 1.5; height: 1.8" material="color: #333333; shader: flat; transparent: false">
+        <a-entity position="3 0.4 1" rotation="0 -80 0" panel-fichap visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 1.5; height: 1.8" material="color: #333333; shader: flat; transparent: false">
             <!-- imagen -->
             <a-entity geometry="primitive: plane; width: 1.5; height: 1.8" material="src: #ficha-pdf-img; shader: flat; transparent: true" position="0 0 0.002">
             </a-entity>
@@ -44,11 +44,11 @@
             <a-plane id="fotos-close" position="0.65 0.85 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
-            <a-plane id="next" position="0.4 -0.1 0.01" height="0.1" width="0.5" scale="0.1 0 1" material="color: blue" class="raycastable">
-                <a-text value="Siguiente" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
+            <a-plane id="next" position="0.4 -0.1 0.01" height="0.1" width="0.5" scale="0.1 0 1" material="color: #73C1FA" class="raycastable">
+                <a-text value="Siguiente" align="center" position="0 0 0.01" color="black" scale="0.3 0.3 0.3"></a-text>
             </a-plane>
-            <a-plane id="previous" position="-0.4 -0.1 0.01" height="0.1" width="0.5" scale="0.1 0 1" material="color: blue" class="raycastable">
-                <a-text value="Anterior" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
+            <a-plane id="previous" position="-0.4 -0.1 0.01" height="0.1" width="0.5" scale="0.1 0 1" material="color: #73C1FA" class="raycastable">
+                <a-text value="Anterior" align="center" position="0 0 0.01" color="black" scale="0.3 0.3 0.3"></a-text>
             </a-plane>
             
 
@@ -72,57 +72,51 @@
             <a-entity position="-0.68 -0.2 0" text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: CERPA BRISEÑO JOSE \n 
                   Direccion: C. DE LA GRIETA 710 , colonia PLAYAS DE TIJUANA SECCION JARDINES, cp , PLAYAS DE TIJUANA, Edo. México; align: justify;"></a-entity>
 
-            <a-plane position="0.5 -0.82 0.001" height="0.15" width="0.5" material="color: blue">
-                <a-text value="Reccorrido" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
-            </a-plane>
-
+           
             <!-- icono para quitar el panel -->
             <!-- la clase raycastable es para que se pueda presionar -->
             <a-plane id="datos-close" position="0.65 0.85 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
 
-            <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link href="recorrido.php" position="0.5 -0.82 0.01" scale="0.3 0.1 1" visible="false">
-            </a-link>
+            
         </a-entity>
         <!-- panel pagos -->
-        <a-entity position="-2 0.4 -1.5" rotation="0 30 0" panel-pagos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 2; height: 1.8" material="color: #333333; shader: flat; transparent: false">
-            <!-- tabla pagos  -->
-            <a-entity position="-0.4 0.6 0.002">
-                <!-- Fila 1 -->
-                <a-entity position="-0.05 0 0">
-                    <a-plane color="gray" width="1" height="0.1"></a-plane>
-                    <!-- Ajusta el ancho y la posición en Y según tus necesidades -->
-                    <a-text value="Referencia" position="-0.45 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Recibo" position="-0.1 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Descripcion" position="0.25 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Total" position="0.60 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Fecha Pago" position="0.95 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                </a-entity>
-                <!-- Fila 2 -->
-                <a-entity position="-0.05 -0.1 0">
-                    <a-plane color="gray" width="1" height="0.1"></a-plane>
-                    <!-- Ajusta el ancho y la posición en Y según tus necesidades -->
-                    <a-text value="Referencia" position="-0.45 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Recibo" position="-0.1 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Descripcion" position="0.25 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Total" position="0.60 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                    <a-text value="Fecha Pago" position="0.95 0 0.05" scale="0.3 0.3 0.3"></a-text>
-                </a-entity>
-
-
-
+        <a-entity position="-2.1 0.4 -1.5" rotation="0 30 0" panel-pagos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 2.8; height: 1.8" material="color: #333333; shader: flat; transparent: false">
+        <a-entity geometry="primitive: plane; width: 2.8; height: 1.5" material="src: #image-pagos; shader: flat; transparent: true" position="0 0 0.002">
             </a-entity>
+        <!-- tabla pagos  -->
+            <!-- <a-entity position="-0.4 0.6 0.002"> -->
+                <!-- Fila 1 -->
+                <!-- <a-entity position="-0.05 0 0"> -->
+                    <!-- <a-plane color="gray" width="1" height="0.1"></a-plane> -->
+                    <!-- Ajusta el ancho y la posición en Y según tus necesidades -->
+                    <!-- <a-text value="Referencia" position="-0.45 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Recibo" position="-0.1 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Descripcion" position="0.25 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Total" position="0.60 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Fecha Pago" position="0.95 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                <!-- </a-entity> -->
+                <!-- Fila 2 -->
+                <!-- <a-entity position="-0.05 -0.1 0"> -->
+                    <!-- <a-plane color="gray" width="1" height="0.1"></a-plane> -->
+                    <!-- Ajusta el ancho y la posición en Y según tus necesidades -->
+                    <!-- <a-text value="Referencia" position="-0.45 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Recibo" position="-0.1 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Descripcion" position="0.25 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Total" position="0.60 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                    <!-- <a-text value="Fecha Pago" position="0.95 0 0.05" scale="0.3 0.3 0.3"></a-text> -->
+                <!-- </a-entity> -->
+            <!-- </a-entity> -->
             <!-- icono para quitar el panel -->
             <!-- la clase raycastable es para que se pueda presionar -->
-            <a-plane id="pagos-close" position="0.9 0.85 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
+            <a-plane id="pagos-close" position="1.3 0.85 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
 
         </a-entity>
         <!-- panel modelo -->
-        <a-entity position="-3 0.4 0" rotation="0 50 0" panel-modelo visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 1.5; height: 1.8" material="color: #333333; shader: flat; opacity: 0">
+        <a-entity position="-3 0.4 1" rotation="0 80 0" panel-modelo visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 1.5; height: 1.8" material="color: #333333; shader: flat; opacity: 0">
 
             <!-- Modelo 3D GLB -->
             <a-entity position="0 -0.3 0" gltf-model="modelos/RG008031_low.glb" scale="0.007 0.007 0.007" animation="property: rotation; to: 90 360 0; loop: true; dur: 9000;"></a-entity>
@@ -130,7 +124,7 @@
             <a-plane id="modelo-close" position="0.65 0.85 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
-            <a-plane position="0.5 -0.82 0.001" height="0.15" width="0.5" material="color: blue">
+            <a-plane position="0.5 -0.82 0.001" height="0.15" width="0.5" material="color: #73C1FA">
                 <a-text value="Visualizar" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
             </a-plane>
 
@@ -143,31 +137,34 @@
 
 
         <!-- foto 360 -->
-        <a-sky src="fotos360/PT058047.jpg" rotation="0 200 0"></a-sky>
+        <a-sky src="fotos360/new_city.jpg" rotation="0 200 0"></a-sky>
         <a-plane id="siguiente" position="0.65 0.7 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
         <!-- assets son los recursos multimedia que se usaran -->
         <a-assets>
             <!-- esta es la imagen para el panel fotos -->
-            <img id="pf-image-img" src="https://cdn.glitch.global/2d43572b-d2e6-41dc-97c2-96f9f5e4e528/edificios.png?v=1698187124889" crossorigin="anonymous" />
+            <img id="pf-image-img" src="fotos/edificios.png" crossorigin="anonymous" />
             <!-- imagenes docs -->
             <img id="ficha-pdf-img" src="docs/fichap.png" crossorigin="anonymous" />
+            <img id="image-pagos" src="docs/pagos.png" crossorigin="anonymous" />
             <!-- imagen del poster de fotos -->
             <img id="fotos-img-poster" src="iconos/fotos.png" crossorigin="anonymous" />
-            <img id="fichap-img-poster" src="iconos/fichaPredial.webp" crossorigin="anonymous" />
+            <img id="fichap-img-poster" src="iconos/fichaPredial.png" crossorigin="anonymous" />
             <img id="pagos-img-poster" src="iconos/pagos.png" crossorigin="anonymous" />
             <img id="datos-img-poster" src="iconos/datos.png" crossorigin="anonymous" />
             <img id="modelo-img-poster" src="iconos/modelo.png" crossorigin="anonymous" />
+            <img id="drone" src="iconos/drone.png" crossorigin="anonymous" />
             <!-- En A-Frame, un a-mixin es un componente que define un conjunto
                 de propiedades y atributos que se pueden reutilizar en múltiples entidades en tu escena.
                 Los mixins son una característica poderosa para la reutilización y la organización del código en A-Frame. -->
             <a-mixin id="p-poster" geometry="primitive: plane; width: 0.4; height: 0.4" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
+            <a-mixin id="p-drone" geometry="primitive: plane; width: 0.7; height: 0.7" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
 
         </a-assets>
         <a-entity position="0 0 0">
             <!-- poster ficha evidencia predial -->
-            <a-entity id="fichap-poster-button" position="3 -1 0" rotation="0 -50 0" mixin="p-poster" material="src: #fichap-img-poster" class="raycastable menu-button">
+            <a-entity id="fichap-poster-button" position="3 -1 1" rotation="0 -80 0" mixin="p-poster" material="src: #fichap-img-poster" class="raycastable menu-button">
                 <a-entity position="0 -0.3 0">
                     <!-- Texto con letra negra -->
                     <a-text value="Ficha Evidencia\nPredial" align="center" color="black" position="0 0 0.01" scale="0.5 0.5 0.5"></a-text>
@@ -195,13 +192,22 @@
                 </a-entity>
             </a-entity>
             <!-- poster modelo -->
-            <a-entity id="modelo-poster-button" position="-3 -1 0" rotation="0 50 0" mixin="p-poster" material="src: #modelo-img-poster" class="raycastable menu-button">
+            <a-entity id="modelo-poster-button" position="-3 -1 1" rotation="0 80 0" mixin="p-poster" material="src: #modelo-img-poster" class="raycastable menu-button">
                 <a-entity position="0 -0.3 0">
                     <!-- Texto con letra negra -->
                     <a-text value="Modelo 3D" align="center" color="black" position="0 0 0.01" scale="0.5 0.5 0.5"></a-text>
                 </a-entity>
             </a-entity>
+            <a-entity  position="0 2 -2" mixin="p-drone" material="src: #drone" class="raycastable" event-set__click="_target: #link; visible: true">
+                 <a-entity position="0 -0.4 0">
+                    <!-- Texto con letra negra -->
+                    <a-text value="Recorrido Virtual" align="center" color="black" position="0 0 0.01" scale="0.5 0.5 0.5"></a-text>
+                </a-entity>
+            </a-entity>
         </a-entity>
+        <!-- Enlace invisible para hacer clic en el botón -->
+        <a-link id="link" href="recorrido.php" position="0 2 -2" scale="0.4 0.3 1" visible="false">
+            </a-link>
 
 
     </a-scene>

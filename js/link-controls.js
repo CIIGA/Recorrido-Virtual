@@ -298,7 +298,7 @@ AFRAME.registerComponent('link-controls', {
       if (this.linkPositionRatio > 0.0 && this.linkPositionRatio < 1.0) {
         animatedEl.components.link.textEl.setAttribute('visible', false);
       } else {
-        animatedEl.components.link.textEl.setAttribute('visible', true);
+        animatedEl.components.link.textEl.setAttribute('visible', false);
       }
       // We won't move the portal closer than 0.5m from the user.
       if (distanceToCamera <= 0.5 && this.peeking) { return; }
@@ -319,7 +319,7 @@ AFRAME.registerComponent('link-controls', {
     if (!urlEl) { return; }
     link = selectedLinkEl.getAttribute('link');
     urlEl.setAttribute('text', 'value', link.title || link.href);
-    urlEl.setAttribute('visible', true);
+    urlEl.setAttribute('visible', false);
   },
 
   onMouseLeave: function (evt) {

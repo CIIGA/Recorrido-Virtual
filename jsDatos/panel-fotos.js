@@ -8,7 +8,7 @@ AFRAME.registerComponent('panel-fotos', {
     this.previous = document.querySelector('#previous');
 
     // Arreglo de rutas de fotos
-    this.fotos = ['imagenes/img1.jpg', 'imagenes/img2.jpg', 'imagenes/img3.jpg', 'imagenes/img4.jpg'];
+    this.fotos = ['imagenes/img1.jpg', 'imagenes/img2.jpg', 'imagenes/img3.jpg', 'imagenes/img4.jpg', 'imagenes/img5.jpg'];
 
     // Obtén la entidad de imagen
     this.imagenGaleria = document.getElementById('imagenGaleria');

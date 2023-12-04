@@ -25,12 +25,12 @@
 
         </a-entity>
         <a-entity position="2 -3 -8" gltf-model="modelos/RG008031_low.glb" scale="0.07 0.07 0.07"></a-entity>
-        <a-plane position="3 1.6 -4" height="0.15" width="0.5" material="color: red">
-            <a-text value="Entrar" align="center" position="0 0 0.01" color="white" scale="0.3 0.3 0.3"></a-text>
+        <a-plane position="3 1.6 -4" height="0.3" width="1.5" material="color: #73C1FA">
+            <a-text value="Foto" align="center" position="0 0 0.01" color="white" scale="0.6 0.6 0.6"></a-text>
         </a-plane>
 
         <!-- Enlace invisible para hacer clic en el botón -->
-        <a-link title="Visualizar Modelo" href="foto.php" position="3 1.6 -4" scale="0.3 0.1 1" visible="false">
+        <a-link title="Visualizar Modelo" href="foto.php" position="3 1.6 -4" scale="0.6 0.2 1" visible="false">
         </a-link>
 
     </a-scene>
