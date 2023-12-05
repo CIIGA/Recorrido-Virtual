@@ -33,7 +33,7 @@
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
 <!-- panel datos -->
-<a-entity position="0 1.6 0" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 6; height: 7.2" material="color: #333333; shader: flat; transparent: false">
+<a-entity position="0 1.6 -3" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 6; height: 7.2" material="color: #333333; shader: flat; transparent: false">
             <!-- imagen -->
             <a-entity geometry="primitive: plane; width: 6; height: 3.24" material="src: #pf-image-img; shader: flat; transparent: true" position="0 1.98 0.002">
             </a-entity>
