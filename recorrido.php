@@ -43,7 +43,7 @@
         ">
         </a-entity>
         <!-- panel datos -->
-        <a-entity position="75 5 -110" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 6; height: 7.2" material="color: #333333; shader: flat; transparent: false">
+        <a-entity position="100 5 -180" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 6; height: 7.2" material="color: #333333; shader: flat; transparent: false">
             <!-- imagen -->
             <a-entity geometry="primitive: plane; width: 6; height: 3.24" material="src: #pf-image-img; shader: flat; transparent: true" position="0 1.98 0.002">
             </a-entity>
