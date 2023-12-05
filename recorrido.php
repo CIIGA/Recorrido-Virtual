@@ -26,36 +26,36 @@
         <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 200" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
             
             <!-- para navegar con los joystick -->
-            <a-entity oculus-touch-controls="hand: left" oculus-y-controls></a-entity>
-            <a-entity oculus-touch-controls="hand: right" oculus-xz-controls></a-entity>
+            <a-entity oculus-touch-controls="hand: left" oculus-xz-controls></a-entity>
+            <a-entity oculus-touch-controls="hand: right" oculus-y-controls></a-entity>
             <!-- los laser -->
             <a-entity id="leftHand" link-controls="hand: left" raycaster="objects: [mixin='box']" line="color: #118A7E"></a-entity>
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
 <!-- panel datos -->
-<a-entity position="0 1.6 -6" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 6; height: 7.2" material="color: #333333; shader: flat; transparent: false">
+<a-entity position="0 1.6 -6" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
             <!-- imagen -->
-            <a-entity geometry="primitive: plane; width: 6; height: 3.24" material="src: #pf-image-img; shader: flat; transparent: true" position="0 1.98 0.002">
+            <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #pf-image-img; shader: flat; transparent: true" position="0 0.99 0.002">
             </a-entity>
             <!--titulo-->
-            <a-entity position="-2.72 -0.4 0" text="shader: msdf; anchor: left; width: 8; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Cuenta: PT058047">
+            <a-entity position="-1.36 -0.2 0" text="shader: msdf; anchor: left; width: 4; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Cuenta: PT058047">
             </a-entity>
             <!--descripcion-->
-            <a-entity position="-2.72 -0.8 0" text="baseline: top; shader: msdf; anchor: left; width: 6+-; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: CERPA BRISEÑO JOSE \n 
+            <a-entity position="-1.36 -0.4 0" text="baseline: top; shader: msdf; anchor: left; width: 3; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: CERPA BRISEÑO JOSE \n 
                   Direccion: C. DE LA GRIETA 710 , colonia PLAYAS DE TIJUANA SECCION JARDINES, cp , PLAYAS DE TIJUANA, Edo. México; align: justify;"></a-entity>
 
-            <a-plane position="2 -3.28 0.001" height="0.6" width="2" material="color: #73C1FA">
-                <a-text value="Entrar" align="center" position="0 0 0.01" color="white" scale="1.2 1.2 1.2"></a-text>
+            <a-plane position="1 -1.64 0.001" height="0.3" width="1" material="color: #73C1FA">
+                <a-text value="Entrar" align="center" position="0 0 0.01" color="white" scale="0.6 0.6 0.6"></a-text>
             </a-plane>
 
             <!-- icono para quitar el panel -->
             <!-- la clase raycastable es para que se pueda presionar -->
-            <a-plane id="datos-close" position="2.6 3.4 0.01" height="0.4" width="0.8" scale="0.1 0 1" material="color: red" class="raycastable">
-                <a-text value="X" align="center" position="0 0 0.01" color="white" scale="2 2 2"></a-text>
+            <a-plane id="datos-close" position="1.3 1.7 0.01" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                <a-text value="X" align="center" position="0 0 0.01" color="white" scale="1 1 1"></a-text>
             </a-plane>
 
             <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link href="foto.php" position="2 -3.28 0.01" scale="1.2 0.4 4" visible="false">
+            <a-link href="foto.php" position="1 -1.64 0.01" scale="0.6 0.2 2" visible="false">
             </a-link>
         </a-entity>
 
