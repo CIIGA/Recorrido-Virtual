@@ -10,7 +10,7 @@
     <script src="js/infoRecorrido.js"></script>
     <script src="js/aframe-tooltip-component.js"></script>
     <!-- <script src="camera-position.js"></script> -->
-    <script src="js/link-controls.js"></script>
+    <script src="js/Datos/link-controls.js"></script>
     <script src="js/oculus-xz-controls.js"></script>
     <script src="js/oculus-y-controls.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>

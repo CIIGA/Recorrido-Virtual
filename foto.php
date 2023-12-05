@@ -206,7 +206,7 @@
             </a-entity>
         </a-entity>
         <!-- Enlace invisible para hacer clic en el botón -->
-        <a-link id="link" href="recorrido.php" position="0 2 -2" scale="0.4 0.3 1" visible="false">
+        <a-link id="link" href="recorrido.php" title="Recorrido Virtual" position="0 2 -2" scale="0.4 0.3 1" visible="false">
             </a-link>
 
 

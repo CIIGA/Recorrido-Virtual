@@ -54,11 +54,11 @@ AFRAME.registerComponent('link-controls', {
 
     // Set text that displays the link title / url
     urlEl.setAttribute('text', {
-      color: 'white',
+      color: 'blue',
       align: 'center',
       font: 'kelsonsans',
       value: '',
-      width: 0.5
+      width: 2
     });
     urlEl.setAttribute('position', '0 0.1 -0.25');
     urlEl.setAttribute('visible', false);
@@ -298,7 +298,7 @@ AFRAME.registerComponent('link-controls', {
       if (this.linkPositionRatio > 0.0 && this.linkPositionRatio < 1.0) {
         animatedEl.components.link.textEl.setAttribute('visible', false);
       } else {
-        animatedEl.components.link.textEl.setAttribute('visible', false);
+        animatedEl.components.link.textEl.setAttribute('visible', true);
       }
       // We won't move the portal closer than 0.5m from the user.
       if (distanceToCamera <= 0.5 && this.peeking) { return; }
@@ -319,7 +319,7 @@ AFRAME.registerComponent('link-controls', {
     if (!urlEl) { return; }
     link = selectedLinkEl.getAttribute('link');
     urlEl.setAttribute('text', 'value', link.title || link.href);
-    urlEl.setAttribute('visible', false);
+    urlEl.setAttribute('visible', true);
   },
 
   onMouseLeave: function (evt) {

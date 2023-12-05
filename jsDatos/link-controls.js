@@ -58,7 +58,7 @@ AFRAME.registerComponent('link-controls', {
       align: 'center',
       font: 'kelsonsans',
       value: '',
-      width: 5
+      width: 2
     });
     urlEl.setAttribute('position', '0 0.1 -0.25');
     urlEl.setAttribute('visible', false);
