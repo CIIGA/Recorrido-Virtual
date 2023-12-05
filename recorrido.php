@@ -21,11 +21,10 @@
 </head>
 
 <body>
-    <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="referenceSpaceType: local">
+    <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures">
         <a-entity id="rig">
-            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 200" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 40 0"></a-camera>
-
-            </a-camera>
+        <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 200" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
+            
             <!-- para navegar con los joystick -->
             <a-entity oculus-touch-controls="hand: left" oculus-y-controls></a-entity>
             <a-entity oculus-touch-controls="hand: right" oculus-xz-controls></a-entity>
@@ -79,7 +78,7 @@
 
 
 
-        <a-entity position="75 -3 -110">
+        <a-entity position="100 -3 -180">
             <a-entity id="datos-poster-button">
                 <a-image id="datos-poster-button" src="iconos/marcador.png" mixin="p-poster" class="raycastable "></a-image>
                 <!-- <a-entity obj-model="obj: url(modelos_assets/Oval_Loc_OBJ_Format.obj); mtl: url(modelos_assets/Oval_Loc_OBJ_Format.mtl)" rotation="0 0 0" animation="property: rotation; to: 0 405 0; dur: 10000; easing: linear; loop: true" mixin="p-poster" class="raycastable"></a-entity> -->
