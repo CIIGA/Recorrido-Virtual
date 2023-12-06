@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures">
+    <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures" background="color: #FFF">
         <a-entity id="rig">
         <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 200" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
             
@@ -44,8 +44,8 @@
             <a-entity position="-1.36 -0.4 0" text="baseline: top; shader: msdf; anchor: left; width: 3; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: CERPA BRISEÑO JOSE \n 
                   Direccion: C. DE LA GRIETA 710 , colonia PLAYAS DE TIJUANA SECCION JARDINES, cp , PLAYAS DE TIJUANA, Edo. México; align: justify;"></a-entity>
 
-            <a-plane position="1 -1.64 0.001" height="0.3" width="1" material="color: #73C1FA">
-                <a-text value="Entrar" align="center" position="0 0 0.01" color="white" scale="0.6 0.6 0.6"></a-text>
+            <a-plane position="1 -1.64 0.01" height="0.3" width="1" material="color: #73C1FA">
+                <a-text value="Entrar" align="center" position="0 0 0.012" color="white" scale="0.6 0.6 0.6"></a-text>
             </a-plane>
 
             <!-- icono para quitar el panel -->
@@ -55,7 +55,7 @@
             </a-plane>
 
             <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link href="foto.php" position="1 -1.64 0.01" scale="0.6 0.2 2" visible="false">
+            <a-link href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
             </a-link>
         </a-entity>
 

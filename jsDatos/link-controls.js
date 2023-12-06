@@ -54,12 +54,13 @@ AFRAME.registerComponent('link-controls', {
 
     // Set text that displays the link title / url
     urlEl.setAttribute('text', {
-      color: 'blue',
+      color: '#73C1FA',
       align: 'center',
       font: 'kelsonsans',
       value: '',
-      width: 2
+      width: 1.5
     });
+   
     urlEl.setAttribute('position', '0 0.1 -0.25');
     urlEl.setAttribute('visible', false);
     urlBackgroundEl.setAttribute('position', '0 -0.0030 -0.001');

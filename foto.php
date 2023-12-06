@@ -137,7 +137,7 @@
 
 
         <!-- foto 360 -->
-        <a-sky src="fotos360/RG008031.jpg" rotation="0 200 0"></a-sky>
+        <a-sky src="fotos360/RG008031.jpg" rotation="0 0 0"></a-sky>
         <a-plane id="siguiente" position="0.65 0.7 0.01" height="0.1" width="0.2" scale="0.1 0 1" material="color: red" class="raycastable">
                 <a-text value="X" align="center" position="0 0 0.01" color="white" scale="0.5 0.5 0.5"></a-text>
             </a-plane>
