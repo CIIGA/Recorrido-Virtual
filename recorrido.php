@@ -7,7 +7,8 @@
     <meta name="description" content="Laser input UI • A-Frame">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="js/infoRecorrido.js"></script>
+    <script src="js/info_RG008031.js"></script>
+    <script src="js/info_RG022014.js"></script>
     <script src="js/aframe-tooltip-component.js"></script>
     <!-- <script src="camera-position.js"></script> -->
     <script src="jsDatos/link-controls.js"></script>
@@ -21,10 +22,12 @@
 </head>
 
 <body>
+    <!-- fog="type: linear; color: #FFF; near: 0; far: 1000" -->
     <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures" background="color: #FFF">
+
         <a-entity id="rig">
-        <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 200" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
-            
+            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 1000" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
+
             <!-- para navegar con los joystick -->
             <a-entity oculus-touch-controls="hand: left" oculus-xz-controls></a-entity>
             <a-entity oculus-touch-controls="hand: right" oculus-y-controls></a-entity>
@@ -32,32 +35,58 @@
             <a-entity id="leftHand" link-controls="hand: left" raycaster="objects: [mixin='box']" line="color: #118A7E"></a-entity>
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
-<!-- panel datos -->
-<a-entity position="0 1.6 -6" panel-datos visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
-            <!-- imagen -->
-            <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #pf-image-img; shader: flat; transparent: true" position="0 0.99 0.002">
+            <!-- panel RG008031 position="0 1.6 -6"-->
+            <a-entity position="0 1.6 -6" panel-RG008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+                <!-- imagen -->
+                <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG008031; shader: flat; transparent: true" position="0 0.99 0.01">
+                </a-entity>
+                <!--titulo-->
+                <a-entity position="-1.36 -0.2 0.01" text="shader: msdf; anchor: left; width: 4; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Cuenta: RG008031">
+                </a-entity>
+                <!--descripcion-->
+                <a-entity position="-1.36 -0.4 0.01" text="baseline: top; shader: msdf; anchor: left; width: 2.9; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: VILLA ACOSTA JUAN CARLOS \n 
+                  Direccion: C.  PASEO CENTENARIO #9580, RIO TIJUANA, TIJUANA, B.C; align: justify;"></a-entity>
+
+                <a-plane position="1 -1.64 0.01" height="0.3" width="1" material="color: #73C1FA">
+                    <a-text value="Entrar" align="center" position="0 0 0.014" color="white" scale="0.6 0.6 0.6"></a-text>
+                </a-plane>
+
+                <!-- icono para quitar el panel -->
+                <!-- la clase raycastable es para que se pueda presionar -->
+                <a-plane id="datos-close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                    <a-text value="X" align="center" position="0 0 0.025" color="white" scale="1 1 1"></a-text>
+                </a-plane>
+
+                <!-- Enlace invisible para hacer clic en el botón -->
+                <a-link href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
+                </a-link>
             </a-entity>
-            <!--titulo-->
-            <a-entity position="-1.36 -0.2 0" text="shader: msdf; anchor: left; width: 4; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Cuenta: PT058047">
+            <!-- panel datos RG022014-->
+            <a-entity position="0 1.6 -6" panel-RG022014 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+                <!-- imagen -->
+                <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG022014; shader: flat; transparent: true" position="0 0.99 0.01">
+                </a-entity>
+                <!--titulo-->
+                <a-entity position="-1.36 -0.2 0.01" text="shader: msdf; anchor: left; width: 4; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Cuenta: RG022014">
+                </a-entity>
+                <!--descripcion-->
+                <a-entity position="-1.36 -0.4 0.01" text="baseline: top; shader: msdf; anchor: left; width: 2.9; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: REYNALDO MORA JOSE \n 
+                  Direccion: C.  P.º DEL CENTENARIO 10310, LA MESA, TIJUANA, B.C; align: justify;"></a-entity>
+
+                <a-plane position="1 -1.64 0.01" height="0.3" width="1" material="color: #73C1FA">
+                    <a-text value="Entrar" align="center" position="0 0 0.014" color="white" scale="0.6 0.6 0.6"></a-text>
+                </a-plane>
+
+                <!-- icono para quitar el panel -->
+                <!-- la clase raycastable es para que se pueda presionar -->
+                <a-plane id="datos-close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                    <a-text value="X" align="center" position="0 0 0.025" color="white" scale="1 1 1"></a-text>
+                </a-plane>
+
+                <!-- Enlace invisible para hacer clic en el botón -->
+                <a-link href="foto.php" position="1 -1.64 0.009" title="Imagen 360" scale="0.6 0.2 2" visible="false">
+                </a-link>
             </a-entity>
-            <!--descripcion-->
-            <a-entity position="-1.36 -0.4 0" text="baseline: top; shader: msdf; anchor: left; width: 3; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Propietario: CERPA BRISEÑO JOSE \n 
-                  Direccion: C. DE LA GRIETA 710 , colonia PLAYAS DE TIJUANA SECCION JARDINES, cp , PLAYAS DE TIJUANA, Edo. México; align: justify;"></a-entity>
-
-            <a-plane position="1 -1.64 0.01" height="0.3" width="1" material="color: #73C1FA">
-                <a-text value="Entrar" align="center" position="0 0 0.012" color="white" scale="0.6 0.6 0.6"></a-text>
-            </a-plane>
-
-            <!-- icono para quitar el panel -->
-            <!-- la clase raycastable es para que se pueda presionar -->
-            <a-plane id="datos-close" position="1.3 1.7 0.01" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
-                <a-text value="X" align="center" position="0 0 0.01" color="white" scale="1 1 1"></a-text>
-            </a-plane>
-
-            <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
-            </a-link>
-        </a-entity>
 
         </a-entity>
 
@@ -67,22 +96,23 @@
             cesiumIONToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MWM0MmE0ZC01NGRhLTQyNGEtYjhkNC02NDczMTg1YTU5Y2MiLCJpZCI6MTY0OTQxLCJpYXQiOjE2OTYwMTI2NTd9.2RgcBxTvGwfwWgWRQm6gGg4B9-uVVNlBRh0M6N-SzY8;
         ">
         </a-entity>
-        
+
 
         <a-assets>
-        <a-mixin id="p-poster" geometry="primitive: plane; width: 5; height: 5" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
-            <img id="datos-img-poster" src="iconos/datos.png" crossorigin="anonymous" />
-            <img id="pf-image-img" src="https://cdn.glitch.global/2d43572b-d2e6-41dc-97c2-96f9f5e4e528/edificios.png?v=1698187124889" crossorigin="anonymous" />
+            <a-mixin id="p-poster" geometry="primitive: plane; width: 20; height: 20" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
 
+            <img id="p-img-RG008031" src="fotosPanel/RG008031.png" crossorigin="anonymous" />
+            <img id="p-img-RG022014" src="fotosPanel/RG022014.png" crossorigin="anonymous" />
         </a-assets>
 
 
-
+        <!-- RG008031 -->
         <a-entity position="100 -3 -180">
-            <a-entity id="datos-poster-button">
-                <a-image id="datos-poster-button" src="iconos/marcador.png" mixin="p-poster" class="raycastable "></a-image>
-                <!-- <a-entity obj-model="obj: url(modelos_assets/Oval_Loc_OBJ_Format.obj); mtl: url(modelos_assets/Oval_Loc_OBJ_Format.mtl)" rotation="0 0 0" animation="property: rotation; to: 0 405 0; dur: 10000; easing: linear; loop: true" mixin="p-poster" class="raycastable"></a-entity> -->
-            </a-entity>
+            <a-image id="button-RG008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <!-- RG022014 -->
+        <a-entity position="-665 -3 -770">
+            <a-image id="button-RG022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
 
 
