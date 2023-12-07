@@ -27,7 +27,7 @@
     <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures" background="color: #FFF">
 
         <a-entity id="rig">
-            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 1000" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 80 0" rotation="0 180 0"></a-camera>
+            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 100" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 1.6 0" rotation="0 180 0"></a-camera>
 
             <!-- para navegar con los joystick -->
             <a-entity oculus-touch-controls="hand: left" oculus-xz-controls></a-entity>
@@ -63,7 +63,7 @@
                 </a-link>
             </a-entity>
             <!-- panel datos RG022014-->
-            <a-entity position="0 1.6 -6" panel-rg022014 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+            <a-entity position="15 1.6 -6" panel-rg022014 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG022014; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -112,7 +112,7 @@
             <a-image id="button-RG008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG022014 -->
-        <a-entity position="30 -3 -10">
+        <a-entity position="20 -3 -10">
             <a-image id="button-RG022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG008031 -->
