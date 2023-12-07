@@ -36,11 +36,19 @@
             <a-entity id="leftHand" link-controls="hand: left" raycaster="objects: [mixin='box']" line="color: #118A7E"></a-entity>
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
-            <!-- panel RG008031 position="0 1.6 -6"-->
-           
+          
 
         </a-entity>
-        <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+
+        <a-entity id="freeman-tiles" position="2700 7530 5700" rotation="-90 180 0" scale="1 1 1" loader-3dtiles="
+            url: https://assets.ion.cesium.com/us-east-1/2271430/tileset.json?v=2;
+            maximumSSE: 16;
+            cesiumIONToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MWM0MmE0ZC01NGRhLTQyNGEtYjhkNC02NDczMTg1YTU5Y2MiLCJpZCI6MTY0OTQxLCJpYXQiOjE2OTYwMTI2NTd9.2RgcBxTvGwfwWgWRQm6gGg4B9-uVVNlBRh0M6N-SzY8;
+        ">
+        </a-entity>
+
+  <!-- panel RG008031 position="0 1.6 -6"-->
+  <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG008031; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -91,15 +99,6 @@
                 <a-link title="Foto 360" href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
                 </a-link>
             </a-entity>
-
-        <a-entity id="freeman-tiles" position="2700 7530 5700" rotation="-90 180 0" scale="1 1 1" loader-3dtiles="
-            url: https://assets.ion.cesium.com/us-east-1/2271430/tileset.json?v=2;
-            maximumSSE: 16;
-            cesiumIONToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MWM0MmE0ZC01NGRhLTQyNGEtYjhkNC02NDczMTg1YTU5Y2MiLCJpZCI6MTY0OTQxLCJpYXQiOjE2OTYwMTI2NTd9.2RgcBxTvGwfwWgWRQm6gGg4B9-uVVNlBRh0M6N-SzY8;
-        ">
-        </a-entity>
-
-
         <a-assets>
             <a-mixin id="p-poster" geometry="primitive: plane; width: 20; height: 20" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
 

@@ -29,7 +29,7 @@ AFRAME.registerComponent('panel-rg008031', {
   // this.el.object3D.visible = false;
   //     }
   // });
-
+  this.backgroundEl.object3D.visible = true;
     this.backgroundEl.object3D.scale.set(1, 1, 1);
 
     this.el.object3D.scale.set(1, 1, 1);
@@ -40,6 +40,8 @@ AFRAME.registerComponent('panel-rg008031', {
   },
 
   onBackgroundClick: function (evt) {
+    this.backgroundEl.object3D.visible = false;
+    this.backgroundEl.object3D.scale.set(0.001, 0.001, 0.001);
     this.el.object3D.visible = false;
   }
 });
