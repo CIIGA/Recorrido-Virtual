@@ -37,7 +37,10 @@
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
             <!-- panel RG008031 position="0 1.6 -6"-->
-            <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+           
+
+        </a-entity>
+        <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG008031; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -88,8 +91,6 @@
                 <a-link title="Foto 360" href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
                 </a-link>
             </a-entity>
-
-        </a-entity>
 
         <a-entity id="freeman-tiles" position="2700 7530 5700" rotation="-90 180 0" scale="1 1 1" loader-3dtiles="
             url: https://assets.ion.cesium.com/us-east-1/2271430/tileset.json?v=2;
