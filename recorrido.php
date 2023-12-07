@@ -7,8 +7,9 @@
     <meta name="description" content="Laser input UI • A-Frame">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="js/info_RG008031.js"></script>
+    <script src="js/info_RG008031.js"></script> 
     <script src="js/info_RG022014.js"></script>
+    <!-- <script src="js/visible.js"></script> -->
     <script src="js/aframe-tooltip-component.js"></script>
     <!-- <script src="camera-position.js"></script> -->
     <script src="jsDatos/link-controls.js"></script>
@@ -36,7 +37,7 @@
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
             <!-- panel RG008031 position="0 1.6 -6"-->
-            <a-entity position="0 1.6 -6" panel-RG008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+            <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG008031; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -53,16 +54,16 @@
 
                 <!-- icono para quitar el panel -->
                 <!-- la clase raycastable es para que se pueda presionar -->
-                <a-plane id="datos-close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                <a-plane id="close-rg008031" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
                     <a-text value="X" align="center" position="0 0 0.025" color="white" scale="1 1 1"></a-text>
                 </a-plane>
 
                 <!-- Enlace invisible para hacer clic en el botón -->
-                <a-link href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
+                <a-link title="Visualizar Modelo" href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
                 </a-link>
             </a-entity>
             <!-- panel datos RG022014-->
-            <a-entity position="0 1.6 -6" panel-RG022014 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+            <a-entity position="0 1.6 -6" panel-rg022014 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG022014; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -79,12 +80,12 @@
 
                 <!-- icono para quitar el panel -->
                 <!-- la clase raycastable es para que se pueda presionar -->
-                <a-plane id="datos-close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                <a-plane id="close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
                     <a-text value="X" align="center" position="0 0 0.025" color="white" scale="1 1 1"></a-text>
                 </a-plane>
 
                 <!-- Enlace invisible para hacer clic en el botón -->
-                <a-link href="foto.php" position="1 -1.64 0.009" title="Imagen 360" scale="0.6 0.2 2" visible="false">
+                <a-link title="Foto 360" href="foto.php" position="1 -1.64 0.009" scale="0.6 0.2 2" visible="false">
                 </a-link>
             </a-entity>
 
@@ -102,18 +103,26 @@
             <a-mixin id="p-poster" geometry="primitive: plane; width: 20; height: 20" material="color: white; shader: flat; transparent: true; opacity: 1" animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter" animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave" position="0 0 0.005"></a-mixin>
 
             <img id="p-img-RG008031" src="fotosPanel/RG008031.png" crossorigin="anonymous" />
-            <img id="p-img-RG022014" src="fotosPanel/RG022014.png" crossorigin="anonymous" />
+            <img id="p-img-RG022014" src="fotosPanel/RG022014.jpg" crossorigin="anonymous" />
         </a-assets>
 
 
         <!-- RG008031 -->
-        <a-entity position="100 -3 -180">
+        <a-entity position="0 -3 -10">
             <a-image id="button-RG008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG022014 -->
-        <a-entity position="-665 -3 -770">
+        <a-entity position="30 -3 -10">
             <a-image id="button-RG022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
+        <!-- RG008031 -->
+        <!-- <a-entity position="100 -3 -180">
+            <a-image id="button-RG008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity> -->
+        <!-- RG022014 -->
+        <!-- <a-entity position="-665 -3 -770">
+            <a-image id="button-RG022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity> -->
 
 
     </a-scene>
@@ -152,7 +161,7 @@
                         newPositionY = self.data.maxY;
                     }
 
-                    console.log('new position Y: ', newPositionY);
+                    // console.log('new position Y: ', newPositionY);
 
                     // Update the camera position
                     self.camera.setAttribute('position', {

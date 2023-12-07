@@ -1,6 +1,6 @@
 AFRAME.registerComponent('oculus-xz-controls', {
     schema: {
-        acceleration: { default: 150 },
+        acceleration: { default: 800 },
         rigSelector: {default: "#rig"},
         fly: { default: false },
         controllerOriented: { default: false },
