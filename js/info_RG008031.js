@@ -1,7 +1,7 @@
 /* global AFRAME */
 AFRAME.registerComponent('panel-rg008031', {
   init: function () {
-    var buttonEls = document.querySelectorAll('#button-RG008031');
+    var buttonEls = document.querySelectorAll('#button-rg008031');
 
     //instanciamos las entidades a las variables
     this.movieImageEl;
@@ -32,7 +32,7 @@ AFRAME.registerComponent('panel-rg008031', {
 
     this.backgroundEl.object3D.scale.set(1, 1, 1);
 
-    // this.el.object3D.scale.set(1, 1, 1);
+    this.el.object3D.scale.set(1, 1, 1);
     if (AFRAME.utils.device.isMobile()) { this.el.object3D.scale.set(1.4, 1.4, 1.4); }
     this.el.object3D.visible = true;
 

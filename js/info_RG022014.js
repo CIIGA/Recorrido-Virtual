@@ -1,7 +1,7 @@
 /* global AFRAME */
 AFRAME.registerComponent('panel-rg022014', {
   init: function () {
-    var buttonEls = document.querySelectorAll('#button-RG022014');
+    var buttonEls = document.querySelectorAll('#button-rg022014');
 
     //instanciamos las entidades a las variables
     this.movieImageEl;
@@ -13,7 +13,7 @@ AFRAME.registerComponent('panel-rg022014', {
     this.onMenuButtonClick = this.onMenuButtonClick.bind(this);
     this.onBackgroundClick = this.onBackgroundClick.bind(this);
     // seleccionamos el boton de cerrar
-    this.backgroundEl = document.querySelector('#close');
+    this.backgroundEl = document.querySelector('#close-rg022014');
     for (var i = 0; i < buttonEls.length; ++i) {
       buttonEls[i].addEventListener('click', this.onMenuButtonClick);
     }
@@ -32,7 +32,7 @@ AFRAME.registerComponent('panel-rg022014', {
 
     this.backgroundEl.object3D.scale.set(1, 1, 1);
 
-    // this.el.object3D.scale.set(1, 1, 1);
+    this.el.object3D.scale.set(1, 1, 1);
     if (AFRAME.utils.device.isMobile()) { this.el.object3D.scale.set(1.4, 1.4, 1.4); }
     this.el.object3D.visible = true;
 

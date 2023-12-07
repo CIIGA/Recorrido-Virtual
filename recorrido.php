@@ -7,8 +7,8 @@
     <meta name="description" content="Laser input UI • A-Frame">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="js/info_RG008031.js"></script> 
-    <script src="js/info_RG022014.js"></script>
+    <script src="js/info_rg008031.js"></script> 
+    <script src="js/info_rg022014.js"></script>
     <!-- <script src="js/visible.js"></script> -->
     <script src="js/aframe-tooltip-component.js"></script>
     <!-- <script src="camera-position.js"></script> -->
@@ -37,7 +37,7 @@
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
             <!-- panel RG008031 position="0 1.6 -6"-->
-            <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+            <a-entity position="0 1.6 -6" panel-rg008031 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG008031; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -63,7 +63,7 @@
                 </a-link>
             </a-entity>
             <!-- panel datos RG022014-->
-            <a-entity position="15 1.6 -6" panel-rg022014 visible="false" scale="1 1 1" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
+            <a-entity position="15 1.6 -6" panel-rg022014 visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 3.6" material="color: #333333; shader: flat; transparent: false">
                 <!-- imagen -->
                 <a-entity geometry="primitive: plane; width: 3; height: 1.62" material="src: #p-img-RG022014; shader: flat; transparent: true" position="0 0.99 0.01">
                 </a-entity>
@@ -80,7 +80,7 @@
 
                 <!-- icono para quitar el panel -->
                 <!-- la clase raycastable es para que se pueda presionar -->
-                <a-plane id="close" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
+                <a-plane id="close-rg022014" position="1.3 1.7 0.02" height="0.2" width="0.4" scale="0.1 0 1" material="color: red" class="raycastable">
                     <a-text value="X" align="center" position="0 0 0.025" color="white" scale="1 1 1"></a-text>
                 </a-plane>
 
@@ -109,11 +109,11 @@
 
         <!-- RG008031 -->
         <a-entity position="0 -3 -10">
-            <a-image id="button-RG008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
+            <a-image id="button-rg008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG022014 -->
         <a-entity position="20 -3 -10">
-            <a-image id="button-RG022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
+            <a-image id="button-rg022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG008031 -->
         <!-- <a-entity position="100 -3 -180">
