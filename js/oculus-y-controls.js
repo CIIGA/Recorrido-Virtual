@@ -1,6 +1,6 @@
 AFRAME.registerComponent('oculus-y-controls', {
   schema: {
-      acceleration: { default: 150 },
+      acceleration: { default: 200 },
       rigSelector: { default: "#rig" },
       enabled: { default: true },
       udAxis: { default: 'y', oneOf: ['x', 'y', 'z'] },
@@ -11,6 +11,7 @@ AFRAME.registerComponent('oculus-y-controls', {
       this.easing = 1.1;
       this.velocity = new THREE.Vector3(0, 0, 0);
       this.tsData = new THREE.Vector2(0, 0);
+      this.el.object3D.rotation.set(0, Math.PI, 0);
 
       this.thumbstickMoved = this.thumbstickMoved.bind(this)
       this.el.addEventListener('thumbstickmoved', this.thumbstickMoved);

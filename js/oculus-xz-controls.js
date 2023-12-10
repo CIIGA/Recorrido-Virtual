@@ -16,6 +16,7 @@ AFRAME.registerComponent('oculus-xz-controls', {
         this.easing = 1.1;
         this.velocity = new THREE.Vector3(0, 0, 0);
         this.tsData = new THREE.Vector2(0, 0);
+        this.el.object3D.rotation.set(0, Math.PI, 0);
 
         this.thumbstickMoved = this.thumbstickMoved.bind(this)
         this.el.addEventListener('thumbstickmoved', this.thumbstickMoved);

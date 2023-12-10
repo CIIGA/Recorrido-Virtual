@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartelera A-Frame</title>
-  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-</head>
-<body>
-  <a-scene>
-    <!-- Plano para la cartelera -->
-    <a-plane color="#333" width="3" height="1.5" position="0 2 -5"></a-plane>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+  <a-scene environment="preset: forest"></a-scene>
 
-    <!-- Texto "Cuenta: 123456" -->
-    <a-entity
-      text="value: Cuenta: 123456; color: white; align: center; wrapCount: 15; width: 3;"
-      position="-1.5 2.5 -5"
-    ></a-entity>
+  <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 1000" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 1.6 0" rotation="0 0 0">
 
-    <!-- Texto "Decarodo" -->
-    <a-entity
-      text="value: Decarodo; color: white; align: center; wrapCount: 15; width: 3;"
-      position="-1.5 2 -5"
-    ></a-entity>
+<a-text value="Hello VR"
+        width="4"
+        id="score"
+        color="black"
+        font="mozillavr"
+        position="0 -.5 -1"
+        anchor="center"
+        align="center"
+        look-at="#camera"> <!-- Agregamos el componente look-at -->
+</a-text>
 
-    <!-- Luces y cámara -->
-    <a-light type="ambient" color="#888"></a-light>
-    <a-light type="directional" position="-5 5 5" target="#ground" intensity="0.5"></a-light>
-    <a-camera position="0 2 0"></a-camera>
+</a-camera>
+    
 
-    <!-- Suelo -->
-    <a-plane id="ground" color="#7BC8A4" rotation="-90 0 0" width="30" height="30"></a-plane>
-  </a-scene>
-</body>
+      <!-- Otros elementos de la escena -->
+
+    </a-scene>
+  </body>
 </html>

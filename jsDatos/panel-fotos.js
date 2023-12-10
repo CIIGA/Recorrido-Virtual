@@ -6,9 +6,9 @@ AFRAME.registerComponent('panel-fotos', {
     this.backgroundEl = document.querySelector('#fotos-close');
     this.next = document.querySelector('#next');
     this.previous = document.querySelector('#previous');
-
+    
     // Arreglo de rutas de fotos
-    this.fotos = ['imagenes/img1.jpg', 'imagenes/img2.jpg', 'imagenes/img3.jpg', 'imagenes/img4.jpg', 'imagenes/img5.jpg'];
+    this.fotos = ['imagenes/'+cuenta+'/img1.jpg', 'imagenes/'+cuenta+'/img2.jpg', 'imagenes/'+cuenta+'/img3.jpg', 'imagenes/'+cuenta+'/img4.jpg', 'imagenes/'+cuenta+'/img5.jpg'];
 
     // Obtén la entidad de imagen
     this.imagenGaleria = document.getElementById('imagenGaleria');
