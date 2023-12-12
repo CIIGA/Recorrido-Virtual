@@ -210,6 +210,30 @@ if ($cuenta == 'RG008031') {
         <a-entity position="6640 -150 -7400" rotation="0 0 0">
             <a-image id="button-rg521005" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
+        <a-entity position="7000 -170 -6800" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="7200 -170 -7100" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="6800 -170 -7100" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="7000 -170 -7500" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="6900 -170 -7700" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="6900 -170 -8000" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="7100 -170 -7100" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="7600 -170 -7100" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
 
 
     </a-scene>
