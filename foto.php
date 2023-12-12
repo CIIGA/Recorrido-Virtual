@@ -225,7 +225,7 @@ $datos = sqlsrv_fetch_array($consulta);
                 </a-entity>
             </a-entity>
             <!-- Enlace invisible para hacer clic en el botón -->
-            <a-link id="link" href="recorrido.php" title="Recorrido Virtual" position="0 2.5 -3" scale="0.4 0.3 1" visible="false">
+            <a-link id="link" href="recorrido.php?cuenta=<?php echo $cuenta ?>" title="Recorrido Virtual" position="0 2.5 -3" scale="0.4 0.3 1" visible="false">
             </a-link>
         </a-entity>
 

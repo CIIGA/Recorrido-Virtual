@@ -3,29 +3,26 @@ $cuenta = 'vacio';
 if (isset($_GET['cuenta'])) {
     $cuenta = $_GET['cuenta'];
 }
-// le quito 40 al marcador en x
-// le quito 120 al marcador en z
-
 if ($cuenta == 'RG008031') {
-    $x = 7400;
-    $y = -100;
-    $z = -6930;
+    $x = 30;
+    $y = 30;
+    $z = -30;
 } elseif ($cuenta == 'RG021010') {
-    $x = 6610;
-    $y = -100;
-    $z = -7500;
+    $x = -600;
+    $y = 30;
+    $z = -490;
 } elseif ($cuenta == 'RG521005') {
-    $x = 6600;
-    $y = -100;
-    $z = -7280;
+    $x = -700;
+    $y = 10;
+    $z = -440;
 } elseif ($cuenta == 'RG022014') {
-    $x = 6610;
-    $y = -100;
-    $z = -7500;
+    $x = -680;
+    $y = 10;
+    $z = -700;
 } else{
-    $x = 7000;
-    $y = 0;
-    $z = -6700;
+    $x = -300;
+    $y = 70;
+    $z = 0;
 }
 ?>
 <!DOCTYPE html>
@@ -53,9 +50,8 @@ if ($cuenta == 'RG008031') {
     <!-- fog="type: linear; color: #FFF; near: 0; far: 1000" -->
     <a-scene environment cursor="rayOrigin: mouse; fuse: false" raycaster="far: 10; objects: a-link, .raycastable" renderer="antialias: true" webxr="optionalFeatures: hand-tracking, oculus-hand-tracking, oculus-hand-tracking-low-level, hand-tracking-gestures" background="color: #87CEEB">
 
-        <!-- <a-entity id="rig" rotation="0 0 0" position="7000 0 -6700"> -->
         <a-entity id="rig" rotation="0 0 0" position="<?php echo $x ?> <?php echo $y ?> <?php echo $z ?>">
-            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 1000" position-controls="minY: -500; maxY: 500; sensitivity: 2.0" position="0 1.6 0" rotation="0 0 0">
+            <a-camera id="camera" camera="active: true" wasd-controls="acceleration: 1000" position-controls="minY: -50; maxY: 500; sensitivity: 2.0" position="0 1.6 0" rotation="0 0 0">
 
 
 
@@ -176,10 +172,10 @@ if ($cuenta == 'RG008031') {
 
         </a-entity>
 
-        <a-entity id="freeman-tiles" position="0 0 0" rotation="-90 180 0" scale="1 1 1" loader-3dtiles="
-            url: https://assets.ion.cesium.com/us-east-1/2388963/tileset.json?v=2;
+        <a-entity id="freeman-tiles" position="2700 7530 5700" rotation="-90 180 0" scale="1 1 1" loader-3dtiles="
+            url: https://assets.ion.cesium.com/us-east-1/2271430/tileset.json?v=2;
             maximumSSE: 16;
-            cesiumIONToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ZjdmM2Y1NC1kMTY2LTQxZjUtYjFlNy1mNTQzODFiNzA1N2IiLCJpZCI6MTY0OTQxLCJpYXQiOjE3MDI0MTQzMDN9.FQs0KVMuR7VA1df-CHc29QWTXLvYcEpSxiPXqNgsWxM;
+            cesiumIONToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MWM0MmE0ZC01NGRhLTQyNGEtYjhkNC02NDczMTg1YTU5Y2MiLCJpZCI6MTY0OTQxLCJpYXQiOjE2OTYwMTI2NTd9.2RgcBxTvGwfwWgWRQm6gGg4B9-uVVNlBRh0M6N-SzY8;
         ">
         </a-entity>
 
@@ -195,19 +191,19 @@ if ($cuenta == 'RG008031') {
 
 
         <!-- RG008031 -->
-        <a-entity position="7440 -150 -7050">
+        <a-entity position="100 -3 -180">
             <a-image id="button-rg008031" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG022014 -->
-        <a-entity position="6650 -140 -7620" rotation="0 -25 0">
+        <a-entity position="-675 10 -760" rotation="0 -25 0">
             <a-image id="button-rg022014" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG021010 -->
-        <a-entity position="6710 -140 -7450" rotation="0 -20 0">
+        <a-entity position="-620 15 -585" rotation="0 -20 0">
             <a-image id="button-rg021010" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <!-- RG521005 -->
-        <a-entity position="6640 -150 -7400" rotation="0 0 0">
+        <a-entity position="-700 -10 -535" rotation="0 -20 0">
             <a-image id="button-rg521005" src="iconos/marcador.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
 

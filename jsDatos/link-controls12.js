@@ -1,5 +1,3 @@
-/* global AFRAME, THREE */
-
 AFRAME.registerSystem('link-controls', {
   init: function () {
     this.peeking = false;
@@ -60,10 +58,11 @@ AFRAME.registerComponent('link-controls', {
       value: '',
       width: 1.5
     });
+   
     urlEl.setAttribute('position', '0 0.1 -0.25');
     urlEl.setAttribute('visible', false);
     urlBackgroundEl.setAttribute('position', '0 -0.0030 -0.001');
-    urlBackgroundEl.setAttribute('slice9', 'width: 0.6; height: 0.2; left: 32; right: 32; top: 64; bottom: 32; src: images/tooltip.png');
+    urlBackgroundEl.setAttribute('slice9', 'width: 0.5; height: 0.1; left: 32; right: 32; top: 64; bottom: 32; src: images/tooltip.png');
     urlBackgroundEl.setAttribute('scale', '1 0.5 1');
     urlEl.appendChild(urlBackgroundEl);
     this.el.appendChild(urlEl);
@@ -99,12 +98,12 @@ AFRAME.registerComponent('link-controls', {
     'oculus-touch-controls': {
       left: {
         xbutton: {
-          tooltip: 'text: Press X to peek link; width: 0.1; height: 0.04; targetPosition: 0.01 0.05 0',
+          tooltip: 'text: ; width: 0.1; height: 0.04; targetPosition: 0.01 0.05 0',
           position: '0.09 0.055 0.050',
           rotation: '-90 0 0'
         },
         trigger: {
-          tooltip: 'text: Press trigger to traverse link; width: 0.11; height: 0.04; targetPosition: 0.01 -0.06 0.06; lineHorizontalAlign: right;',
+          tooltip: 'text: ; width: 0.11; height: 0.04; targetPosition: 0.01 -0.06 0.06; lineHorizontalAlign: right;',
           position: '-0.13 -0.055 0.04',
           rotation: '-90 0 0'
         }

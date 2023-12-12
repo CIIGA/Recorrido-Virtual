@@ -35,8 +35,8 @@ $cuenta=$_GET['cuenta'];
         <?php } else { ?>
             <a-entity position="2 -3 -8" gltf-model="modelos/<?php echo $cuenta ?>.glb" scale="2 2 2"></a-entity>
         <?php } ?>
-        <a-plane position="3 1.6 -4" height="0.3" width="1.5" material="color: #73C1FA">
-            <a-text value="Foto 360" align="center" position="0 0 0.01" color="white" scale="0.6 0.6 0.6"></a-text>
+        <a-plane position="3 1.6 -4" height="0.3" width="1.5" material="color: #FFF">
+            <a-text value="Foto 360" align="center" position="0 0 0.01" color="black" scale="0.6 0.6 0.6"></a-text>
         </a-plane>
 
         <!-- Enlace invisible para hacer clic en el botón -->
