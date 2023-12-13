@@ -213,10 +213,10 @@ if ($cuenta == 'RG008031') {
         <a-entity position="7000 -170 -6800" rotation="0 0 0">
             <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
-        <a-entity position="7200 -170 -7100" rotation="0 0 0">
+        <a-entity position="7200 -170 -7000" rotation="0 0 0">
             <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
-        <a-entity position="6800 -170 -7100" rotation="0 0 0">
+        <a-entity position="6800 -170 -6850" rotation="0 0 0">
             <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
         <a-entity position="7000 -170 -7500" rotation="0 0 0">
@@ -231,7 +231,13 @@ if ($cuenta == 'RG008031') {
         <a-entity position="7100 -170 -7100" rotation="0 0 0">
             <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
-        <a-entity position="7600 -170 -7100" rotation="0 0 0">
+        <a-entity position="7600 -170 -6900" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="6900 -170 -7200" rotation="0 0 0">
+            <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
+        </a-entity>
+        <a-entity position="7200 -170 -7300" rotation="0 0 0">
             <a-image src="iconos/marcador_azul.webp" mixin="p-poster" class="raycastable "></a-image>
         </a-entity>
 
